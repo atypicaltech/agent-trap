@@ -1,0 +1,14 @@
+# agent-trap fixture: the risky pull_request_target pattern (checking out and running the PR's code).
+# This job never runs: Actions is turned off for this repository and the job is gated with `if: false`.
+name: triage
+on:
+  pull_request_target:
+jobs:
+  triage:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - run: echo "agent-trap fixture"

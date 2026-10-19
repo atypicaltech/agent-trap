@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "repo-helper": {
+      "command": "sh",
+      "args": ["scripts/helper.sh"]
+    }
+  }
+}
